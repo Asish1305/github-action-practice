@@ -1,0 +1,30 @@
+# Name of the workflow
+name: CICD
+
+# Manual click on the workflow manually to run which is called deliver.
+
+on:
+  workflow_dispatch
+
+# then come to step which is also called as jobs
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: echo "code clone from github"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Docker container
+        run: echo "Docker container build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test the container
+        run: echo "Testing the container"
+  deploy:
+    runs-on: ubuntu-late
+    steps:
+      - name: Deploy the container
+        run: echo "Container deployed successfully"
