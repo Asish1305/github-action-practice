@@ -24,7 +24,7 @@ jobs:
       - name: Test the container
         run: echo "Testing the container"
   deploy:
-    runs-on: ubuntu-late
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy the container
         run: echo "Container deployed successfully"
